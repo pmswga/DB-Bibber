@@ -1,0 +1,49 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "user": "root",
+    "pass": "",
+    "name": "my-db-1",
+    "charset": "utf8",
+    "tables": {
+        "users": {
+           "id_user": "int, primary, ++",
+           "first_name": "varchar(255), nn",
+           "second_name": "varchar(255), nn",
+           "patronymic": "varchar(255), nn",
+           "email": "varchar(255), nn, un",
+           "password": "varchar(32)",
+           "id_type": "int, nn"
+       },
+       "usersType": {
+           "id_user_type": "int, primary, ++",
+           "caption": "varchar(32), nn, un"
+       },
+       "students": {
+            "id_student": "int, primary, ++",
+            "id_group": "int, nn",
+            "telephone": "varchar(255), nn"
+       },
+       "qsoft_progger": {
+            "id": "int, primary, ++",
+            "name": "varchar(34), nn",
+            "weight": "int"
+       }
+    },
+    "relations": {
+        "R1": {
+            "fst": "users",
+            "pk": "id_type",
+            "snd": "usersType",
+            "fk": "id_user_type",
+            "type": "on update cascade on delete cascade"
+        },
+        "R2": {
+            "fst": "students",
+            "pk": "id_student",
+            "snd": "users",
+            "fk": "id_user",
+            "type": "on update cascade on delete cascade"
+        }
+    }
+}
