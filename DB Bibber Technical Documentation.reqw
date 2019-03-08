@@ -1,0 +1,323 @@
+{
+  "id": "DB-Bibber",
+  "documents": [
+    {
+      "id": "Technical-documentation",
+      "guid": "de9a95bd-2358-4ea0-bde7-0b822cf9d6b4",
+      "name": "DB-Bibber-technical-documentation",
+      "lastId": 6,
+      "createdOn": "2019-03-08T23:07:41.320Z",
+      "createdBy": {
+        "name": "pmswga",
+        "email": "pmswga@none.ru",
+        "company": ""
+      },
+      "lastChangedOn": "2019-03-08T23:20:01.248Z",
+      "lastChangedBy": {
+        "name": "pmswga",
+        "email": "pmswga@none.ru",
+        "company": ""
+      },
+      "data": [
+        {
+          "id": "1",
+          "guid": "2e7c6f81-0bee-4ee1-a1d4-5110203db761",
+          "heading": "Общее описание",
+          "text": "<p>DB Bibber - инструментальное средства работы и тестирования базы данных</p>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "pmswga@none.ru",
+                "name": "pmswga"
+              },
+              "changedOn": "2019-03-08T23:07:43.199Z",
+              "docId": "Technical-documentation",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null,
+                "text": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "pmswga@none.ru",
+                "name": "pmswga"
+              },
+              "changedOn": "2019-03-08T23:09:40.684Z"
+            },
+            {
+              "attributesChanged": {
+                "heading": "Описание"
+              },
+              "changedBy": {
+                "company": "",
+                "email": "pmswga@none.ru",
+                "name": "pmswga"
+              },
+              "changedOn": "2019-03-08T23:13:25.085Z"
+            }
+          ],
+          "children": [
+            {
+              "id": "2",
+              "guid": "ba4efa49-ac34-4783-a9bf-1e3e8d7276fa",
+              "heading": "Средства работы с базой данных",
+              "text": "<p>Для работы с базой данных используется JSON-файл, который описывает структуру базы данных и её объекты:</p><ul><li>общие сведения</li><li>пользователи</li><li>таблицы</li><li>связи</li><li>хранимые процедуры</li><li>функции</li><li>триггеры</li></ul><p>И на базе этого JSON-файла происходит последующая генерация SQL-кода, который можно будет запускать непосредственно в СУБД.</p><p>&nbsp;</p>",
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "pmswga@none.ru",
+                    "name": "pmswga"
+                  },
+                  "changedOn": "2019-03-08T23:09:46.866Z",
+                  "docId": "Technical-documentation",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null,
+                    "text": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "pmswga@none.ru",
+                    "name": "pmswga"
+                  },
+                  "changedOn": "2019-03-08T23:11:24.631Z"
+                },
+                {
+                  "attributesChanged": {
+                    "text": "<p>Для работы с базой данных используется JSON-файл, который описывает структуру базы данных и её объекты:</p><ul><li>общие сведения</li><li>пользователи</li><li>таблицы</li><li>связи</li><li>хранимые процедуры</li><li>функции</li><li>триггеры</li></ul>"
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "pmswga@none.ru",
+                    "name": "pmswga"
+                  },
+                  "changedOn": "2019-03-08T23:20:01.224Z"
+                }
+              ],
+              "children": [
+                {
+                  "id": "5",
+                  "guid": "76bc85ec-4c72-4f68-a1db-1734609e7e6c",
+                  "heading": "Требования к выполняемым функциям",
+                  "history": [
+                    {
+                      "affectedNodeId": "1",
+                      "changedBy": {
+                        "company": "",
+                        "email": "pmswga@none.ru",
+                        "name": "pmswga"
+                      },
+                      "changedOn": "2019-03-08T23:15:28.173Z",
+                      "docId": "Technical-documentation",
+                      "structureAction": "Create"
+                    },
+                    {
+                      "affectedNodeId": "3",
+                      "changedBy": {
+                        "company": "",
+                        "email": "pmswga@none.ru",
+                        "name": "pmswga"
+                      },
+                      "changedOn": "2019-03-08T23:15:45.458Z",
+                      "docId": "Technical-documentation",
+                      "structureAction": "SwapUp"
+                    },
+                    {
+                      "attributesChanged": {
+                        "heading": null
+                      },
+                      "changedBy": {
+                        "company": "",
+                        "email": "pmswga@none.ru",
+                        "name": "pmswga"
+                      },
+                      "changedOn": "2019-03-08T23:15:45.515Z"
+                    },
+                    {
+                      "affectedNodeId": "1",
+                      "changedBy": {
+                        "company": "",
+                        "email": "pmswga@none.ru",
+                        "name": "pmswga"
+                      },
+                      "changedOn": "2019-03-08T23:15:49.175Z",
+                      "docId": "Technical-documentation",
+                      "structureAction": "Demote"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "6",
+                      "guid": "7610a32e-99be-4bd9-863f-7434c3f7010c",
+                      "heading": "Генерация SQL-кода",
+                      "text": "<p>Предоставить возможность генерировать SQL-код из JSON файла с заданными параметрами.</p><p>&nbsp;</p><p>Предполагается реализовать генераторы под различные базы данных:</p><ul><li>mysql</li><li>mssql</li><li>postgresql</li><li>mongodb</li></ul><p>&nbsp;</p><p>Например вот такой JSON-файл:</p><p>&nbsp;</p><p>{</p><p>&nbsp; &nbsp; \"name\": \"data-base-name\",</p><p>&nbsp; &nbsp; \"charset\": \"utf8\"</p><p>}</p><p>&nbsp;</p><p>Можно преобразовать в MySQL код:</p><p>&nbsp;</p><p>CREATE DATABASE `data-base-name` CHARSET `utf8`;</p><p>&nbsp;</p>",
+                      "history": [
+                        {
+                          "affectedNodeId": "5",
+                          "changedBy": {
+                            "company": "",
+                            "email": "pmswga@none.ru",
+                            "name": "pmswga"
+                          },
+                          "changedOn": "2019-03-08T23:16:05.501Z",
+                          "docId": "Technical-documentation",
+                          "structureAction": "Create"
+                        },
+                        {
+                          "attributesChanged": {
+                            "heading": null,
+                            "text": null
+                          },
+                          "changedBy": {
+                            "company": "",
+                            "email": "pmswga@none.ru",
+                            "name": "pmswga"
+                          },
+                          "changedOn": "2019-03-08T23:17:58.601Z"
+                        },
+                        {
+                          "attributesChanged": {
+                            "text": "<p>Предоставить возможность генерировать SQL-код из JSON файла с заданными параметрами.</p><p>&nbsp;</p><p>Например вот такой JSON-файл:</p><p>&nbsp;</p><p>{</p><p>&nbsp; &nbsp; \"name\": \"data-base-name\",</p><p>&nbsp; &nbsp; \"charset\": \"utf8\"</p><p>}</p><p>&nbsp;</p><p>Можно преобразовать в MySQL код:</p><p>&nbsp;</p><p>CREATE DATABASE `data-base-name` CHARSET `utf8`;</p><p>&nbsp;</p>"
+                          },
+                          "changedBy": {
+                            "company": "",
+                            "email": "pmswga@none.ru",
+                            "name": "pmswga"
+                          },
+                          "changedOn": "2019-03-08T23:19:11.242Z"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3",
+              "guid": "9e8f8be3-267e-451b-ab7d-a10deec87261",
+              "heading": "Средства тестирования базы данных",
+              "text": "<p>Для тестирования базы данных используются JSON-файлы, которые описывают тесты следующих видов:</p><ul><li>Проверка на целостность (т.е. присутствие объектов базы данных)</li><li>\"Сеялки\" (для добавления различных данных)</li><li>Проверка таблиц на заданные значения</li></ul>",
+              "history": [
+                {
+                  "affectedNodeId": "1",
+                  "changedBy": {
+                    "company": "",
+                    "email": "pmswga@none.ru",
+                    "name": "pmswga"
+                  },
+                  "changedOn": "2019-03-08T23:11:30.718Z",
+                  "docId": "Technical-documentation",
+                  "structureAction": "Create"
+                },
+                {
+                  "attributesChanged": {
+                    "heading": null,
+                    "text": null
+                  },
+                  "changedBy": {
+                    "company": "",
+                    "email": "pmswga@none.ru",
+                    "name": "pmswga"
+                  },
+                  "changedOn": "2019-03-08T23:12:56.097Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "guid": "c24b5091-eae6-4aad-a110-f04c31b33579",
+          "heading": "Техническое описание ",
+          "text": "<p>Язык реализации: С++</p><p>&nbsp;</p><p>Используемые библиотеки:</p><ul><li>Qt (в частности QJson)</li></ul><p>&nbsp;</p><p>Используемые инструментальные средства:</p><ul><li>Компилятор g++</li><li>cppcheck</li><li>CPPUnit</li></ul>",
+          "history": [
+            {
+              "affectedNodeId": "#",
+              "changedBy": {
+                "company": "",
+                "email": "pmswga@none.ru",
+                "name": "pmswga"
+              },
+              "changedOn": "2019-03-08T23:13:28.871Z",
+              "docId": "Technical-documentation",
+              "structureAction": "Create"
+            },
+            {
+              "attributesChanged": {
+                "heading": null,
+                "text": null
+              },
+              "changedBy": {
+                "company": "",
+                "email": "pmswga@none.ru",
+                "name": "pmswga"
+              },
+              "changedOn": "2019-03-08T23:14:42.076Z"
+            },
+            {
+              "attributesChanged": {
+                "text": "<p>Язык реализации: С++</p><p>&nbsp;</p><p>Используемые библиотеки:</p><ul><li>Qt (в частности QJson)</li></ul><p>&nbsp;</p><p>Используемые инструментальные средства:</p><ul><li>Компилятор g++</li><li>cppcheck</li><li>&nbsp;</li></ul>"
+              },
+              "changedBy": {
+                "company": "",
+                "email": "pmswga@none.ru",
+                "name": "pmswga"
+              },
+              "changedOn": "2019-03-08T23:15:05.495Z"
+            }
+          ]
+        }
+      ],
+      "attributes": {
+      },
+      "view": {
+        "columns": [
+          {
+            "columnId": "id",
+            "hidden": false,
+            "width": 65
+          },
+          {
+            "columnId": "description",
+            "hidden": false,
+            "width": 500
+          },
+          {
+            "columnId": "attributes",
+            "hidden": true,
+            "width": 300
+          },
+          {
+            "columnId": "discussion",
+            "hidden": true,
+            "width": 300
+          },
+          {
+            "columnId": "links",
+            "hidden": true,
+            "width": 300
+          }
+        ]
+      }
+    }
+  ],
+  "traceability": {
+    "reference": {
+      "name": "Reference",
+      "source": "References",
+      "target": "Referenced by"
+    }
+  },
+  "metadata": {
+    "format": "2.3",
+    "saveHistory": true
+  }
+}
