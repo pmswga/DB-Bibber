@@ -1,0 +1,306 @@
+# depslib dependency file v1.0
+1552161118 source:c:\users\pmswga\desktop\qjson\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	"nlohmann/json.hpp"
+
+1552159253 c:\users\pmswga\desktop\qjson\nlohmann\json.hpp
+	<algorithm>
+	<cassert>
+	<ciso646>
+	<cstddef>
+	<functional>
+	<initializer_list>
+	<iosfwd>
+	<iterator>
+	<numeric>
+	<string>
+	<utility>
+	"json_fwd.hpp"
+	"detail/macro_scope.hpp"
+	"detail/meta/cpp_future.hpp"
+	"detail/meta/type_traits.hpp"
+	"detail/exceptions.hpp"
+	"detail/value_t.hpp"
+	"detail/conversions/from_json.hpp"
+	"detail/conversions/to_json.hpp"
+	"detail/input/input_adapters.hpp"
+	"detail/input/lexer.hpp"
+	"detail/input/parser.hpp"
+	"detail/iterators/primitive_iterator.hpp"
+	"detail/iterators/internal_iterator.hpp"
+	"detail/iterators/iter_impl.hpp"
+	"detail/iterators/iteration_proxy.hpp"
+	"detail/iterators/json_reverse_iterator.hpp"
+	"detail/output/output_adapters.hpp"
+	"detail/input/binary_reader.hpp"
+	"detail/output/binary_writer.hpp"
+	"detail/output/serializer.hpp"
+	"detail/json_ref.hpp"
+	"detail/json_pointer.hpp"
+	"adl_serializer.hpp"
+	"detail/macro_unscope.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\json_fwd.hpp
+	<cstdint>
+	<map>
+	<memory>
+	<string>
+	<vector>
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\macro_scope.hpp
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\meta\cpp_future.hpp
+	<ciso646>
+	<cstddef>
+	<type_traits>
+
+1552159511 c:\users\pmswga\desktop\qjson\nlohmann\detail\meta\type_traits.hpp
+	<ciso646>
+	<limits>
+	<type_traits>
+	<utility>
+	"../../json_fwd.hpp"
+	"../iterators/iterator_traits.hpp"
+	"cpp_future.hpp"
+	"detected.hpp"
+	"../macro_scope.hpp"
+
+1552159448 c:\users\pmswga\desktop\qjson\nlohmann\detail\iterators\iterator_traits.hpp
+	<iterator>
+	"../meta/void_t.hpp"
+	"../meta/cpp_future.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\meta\void_t.hpp
+
+1552159502 c:\users\pmswga\desktop\qjson\nlohmann\detail\meta\detected.hpp
+	<type_traits>
+	"void_t.hpp"
+
+1552159531 c:\users\pmswga\desktop\qjson\nlohmann\detail\exceptions.hpp
+	<exception>
+	<stdexcept>
+	<string>
+	"input/position_t.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\input\position_t.hpp
+	<cstddef>
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\value_t.hpp
+	<array>
+	<ciso646>
+	<cstddef>
+	<cstdint>
+
+1552159584 c:\users\pmswga\desktop\qjson\nlohmann\detail\conversions\from_json.hpp
+	<algorithm>
+	<array>
+	<ciso646>
+	<forward_list>
+	<iterator>
+	<map>
+	<string>
+	<tuple>
+	<type_traits>
+	<unordered_map>
+	<utility>
+	<valarray>
+	"../exceptions.hpp"
+	"../macro_scope.hpp"
+	"../meta/cpp_future.hpp"
+	"../meta/type_traits.hpp"
+	"../value_t.hpp"
+
+1552159664 c:\users\pmswga\desktop\qjson\nlohmann\detail\conversions\to_json.hpp
+	<ciso646>
+	<iterator>
+	<tuple>
+	<type_traits>
+	<utility>
+	<valarray>
+	<vector>
+	"../meta/cpp_future.hpp"
+	"../meta/type_traits.hpp"
+	"../value_t.hpp"
+	"../iterators/iteration_proxy.hpp"
+
+1552159697 c:\users\pmswga\desktop\qjson\nlohmann\detail\iterators\iteration_proxy.hpp
+	<cstddef>
+	<string>
+	<iterator>
+	<tuple>
+	"../value_t.hpp"
+	"../meta/type_traits.hpp"
+
+1552159722 c:\users\pmswga\desktop\qjson\nlohmann\detail\input\input_adapters.hpp
+	<cassert>
+	<cstddef>
+	<cstring>
+	<istream>
+	<iterator>
+	<memory>
+	<numeric>
+	<string>
+	<type_traits>
+	<utility>
+	<cstdio>
+	"../iterators/iterator_traits.hpp"
+	"../macro_scope.hpp"
+
+1552159760 c:\users\pmswga\desktop\qjson\nlohmann\detail\input\lexer.hpp
+	<clocale>
+	<cstddef>
+	<cstdlib>
+	<cstdio>
+	<initializer_list>
+	<string>
+	<vector>
+	"../macro_scope.hpp"
+	"input_adapters.hpp"
+	"position_t.hpp"
+
+1552159862 c:\users\pmswga\desktop\qjson\nlohmann\detail\input\parser.hpp
+	<cassert>
+	<cmath>
+	<cstdint>
+	<functional>
+	<string>
+	<utility>
+	"../exceptions.hpp"
+	"../macro_scope.hpp"
+	"../meta/is_sax.hpp"
+	"input_adapters.hpp"
+	"json_sax.hpp"
+	"lexer.hpp"
+	"../value_t.hpp"
+
+1552159879 c:\users\pmswga\desktop\qjson\nlohmann\detail\meta\is_sax.hpp
+	<cstdint>
+	<utility>
+	"detected.hpp"
+	"type_traits.hpp"
+
+1552159896 c:\users\pmswga\desktop\qjson\nlohmann\detail\input\json_sax.hpp
+	<cassert>
+	<cstddef>
+	<string>
+	<vector>
+	"../exceptions.hpp"
+	"../macro_scope.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\iterators\primitive_iterator.hpp
+	<cstddef>
+	<limits>
+
+1552159906 c:\users\pmswga\desktop\qjson\nlohmann\detail\iterators\internal_iterator.hpp
+	"primitive_iterator.hpp"
+
+1552159968 c:\users\pmswga\desktop\qjson\nlohmann\detail\iterators\iter_impl.hpp
+	<ciso646>
+	<iterator>
+	<type_traits>
+	"../exceptions.hpp"
+	"internal_iterator.hpp"
+	"primitive_iterator.hpp"
+	"../macro_scope.hpp"
+	"../meta/cpp_future.hpp"
+	"../meta/type_traits.hpp"
+	"../value_t.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\iterators\json_reverse_iterator.hpp
+	<cstddef>
+	<iterator>
+	<utility>
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\output\output_adapters.hpp
+	<algorithm>
+	<cstddef>
+	<ios>
+	<iterator>
+	<memory>
+	<ostream>
+	<string>
+	<vector>
+
+1552160022 c:\users\pmswga\desktop\qjson\nlohmann\detail\input\binary_reader.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<cstring>
+	<iterator>
+	<limits>
+	<string>
+	<utility>
+	"input_adapters.hpp"
+	"json_sax.hpp"
+	"../exceptions.hpp"
+	"../macro_scope.hpp"
+	"../meta/is_sax.hpp"
+	"../value_t.hpp"
+
+1552160083 c:\users\pmswga\desktop\qjson\nlohmann\detail\output\binary_writer.hpp
+	<algorithm>
+	<array>
+	<cstdint>
+	<cstring>
+	<limits>
+	"../input/binary_reader.hpp"
+	"output_adapters.hpp"
+
+1552160149 c:\users\pmswga\desktop\qjson\nlohmann\detail\output\serializer.hpp
+	<algorithm>
+	<array>
+	<cassert>
+	<ciso646>
+	<clocale>
+	<cmath>
+	<cstddef>
+	<cstdint>
+	<cstdio>
+	<limits>
+	<string>
+	<type_traits>
+	"../exceptions.hpp"
+	"../conversions/to_chars.hpp"
+	"../macro_scope.hpp"
+	"../meta/cpp_future.hpp"
+	"binary_writer.hpp"
+	"output_adapters.hpp"
+	"../value_t.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\conversions\to_chars.hpp
+	<cassert>
+	<ciso646>
+	<cmath>
+	<cstdint>
+	<cstring>
+	<limits>
+	<type_traits>
+
+1552160160 c:\users\pmswga\desktop\qjson\nlohmann\detail\json_ref.hpp
+	<initializer_list>
+	<utility>
+	"meta/type_traits.hpp"
+
+1552160183 c:\users\pmswga\desktop\qjson\nlohmann\detail\json_pointer.hpp
+	<algorithm>
+	<cassert>
+	<numeric>
+	<string>
+	<vector>
+	"macro_scope.hpp"
+	"exceptions.hpp"
+	"value_t.hpp"
+
+1552160211 c:\users\pmswga\desktop\qjson\nlohmann\adl_serializer.hpp
+	<utility>
+	"detail/conversions/from_json.hpp"
+	"detail/conversions/to_json.hpp"
+
+1550785844 c:\users\pmswga\desktop\qjson\nlohmann\detail\macro_unscope.hpp
+
