@@ -1,0 +1,71 @@
+{
+    "connection": {
+        "host": "localhost",
+        "user": "root",
+        "pass": ""
+    },
+    
+    "general": {
+        "name": "",
+        "description": "",
+        "author": "",
+        "charset": "utf8",
+        "type": "mysql"
+    },
+    
+    "users": {
+        "user-1": {
+            "login": "__login",
+            "pass": "__pass"
+        }
+    },
+    
+    "tables": {
+        "users": {
+           "id_user": "int, primary, ++",
+           "first_name": "varchar(255), nn",
+           "second_name": "varchar(255), nn",
+           "patronymic": "varchar(255), nn",
+           "email": "varchar(255), nn, un",
+           "password": "varchar(32)",
+           "id_type": "int, nn"
+       },
+       "usersType": {
+           "id_user_type": "int, primary, ++",
+           "caption": "varchar(32), nn, un"
+       }
+    },
+    
+    "relations": {
+        "R1": {
+            "primary": "users",
+            "pk": "id_type",
+            "foreign": "usersType",
+            "fk": "id_user_type",
+            "action": "ON DELETE|UPDATE CASCADE"
+        }
+    },
+    
+    "procedures": {
+        "addUser": {
+            "args": {
+                "fn": "string(255)",
+                "sn": "string(255)",
+                "pt": "string(255)",
+                "email": "string(255)",
+                "pass": "string(32)",
+                "type": "int"
+            }
+        }
+    },
+    
+    "functions": {
+        "getCountUsers": {
+            "return": "int"
+        }
+    },
+    
+    "triggers": {
+    
+    }
+}
