@@ -6,6 +6,7 @@
 #include <QJsonArray>
 #include <QJsonValue>
 #include <QJsonObject>
+#include <QVariant>
 
 class Project
 {
@@ -19,6 +20,8 @@ public:
     void setDocument(QJsonDocument document);
 
     QJsonValue getSection(QString section);
+    
+    QString toJson();
 
 };
 

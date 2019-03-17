@@ -19,3 +19,8 @@ QJsonValue Project::getSection(QString section)
 {
     return this->project_document.object().value(section);
 }
+
+QString Project::toJson()
+{
+    return this->project_document.toVariant().toString();
+}

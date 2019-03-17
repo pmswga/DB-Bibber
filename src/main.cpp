@@ -1,107 +1,97 @@
+#include "core/project.h"
+#include <QTextStream>
+#include <QFile>
+#include <QDebug>
+#include <QJsonObject>
 #include <iostream>
-#include <string>
-#include <fstream>
-#include "nlohmann/json.hpp"
 using namespace std;
-using namespace nlohmann;
-
-enum ARGV_KEY
-{
-    COMMAND  = 1,
-    FILENAME = 2
-};
-
-class Command
-{
-protected:
-    json j;
-
-public:
-    Command()
-    {
-
-    }
-
-    virtual ~Command() {};
-
-    virtual void execute() {};
-
-};
-
-class BuildFileCommand : public Command
-{
-    string filename;
-
-public:
-    BuildFileCommand(string filename = "") : Command(), filename(filename)
-    {
-
-    }
-
-    virtual ~BuildFileCommand() {};
-
-    void execute()
-    {
-        this->j["connection"]["host"] = "";
-        this->j["connection"]["port"] = "";
-        this->j["connection"]["name"] = "";
-        this->j["connection"]["pass"] = "";
-
-        ofstream file;
-
-        if (filename.empty()) {
-            file.open("test.json");
-        } else {
-            file.open(filename);
-        }
-
-        if (file.is_open()) {
-            file << this->j.dump(4);
-        }
-
-        file.close();
-    }
-
-};
 
 int main(int argc, char *argv[])
 {
-    string command = "", filename = "";
-
+    QString command = argv[1];
+    Project project();
+    
     if (argc > 1)
     {
-        command = argv[COMMAND];
-        Command *cmd = nullptr;
-
         switch (argc)
         {
         case 2:
             {
+                command = argv[1];
+                
+                if (command == "--init") {
+                    QJsonObject connectionSection;
+                    connectionSection["host"] = "localhost";
+                    connectionSection["port"] = "";
+                    connectionSection["user"] = "root";
+                    connectionSection["pass"] = "";
+                    
+                    QJsonObject generalSection;
+                    generalSection["name"] = "";
+                    generalSection["descrption"] = "";
+                    generalSection["author"] = "";
+                    generalSection["charset"] = "utf8";
+                    generalSection["type"] = "";
+                    
+                    
+                    QJsonObject json;
+                    json.insert("connection", connectionSection);
+                    json.insert("general", generalSection);
+                    
+                    QJsonDocument doc;
+                    doc.setObject(json);
+                    
+                    QFile file("example.json");
+                    file.open(QIODevice::WriteOnly);
+                    
+                    if (file.isOpen()) {
+                        file.write(doc.toJson());
+                    }
+                    
+                    file.close();
+                }
+                
                 if (command == "--help") {
-
+                    
                 }
-
-                if (command == "--build") {
-                    cmd = new BuildFileCommand();
-                    cmd->execute();
+                
+                if (command == "--version") {
+                    
                 }
-
+                
             } break;
         case 3:
             {
-                filename = argv[FILENAME];
-
-                if (command == "--build") {
-                    cmd = new BuildFileCommand(filename);
-                    cmd->execute();
-                }
-
+                
+                QString filename = argv[1];
             } break;
         default:
             {
-                cerr << "Invalid arguments count" << '\n';
+                cout << "Unknow command" << '\n';
             } break;
         }
     }
+
+//    QByteArray json;
+
+//    QFile file("C:/OSPanel/domains/dbbibber/src/sqlgen/test.json");
+
+//    if (file.exists()) {
+
+//        if (file.open(QIODevice::ReadOnly)) {
+//            json = file.readAll();
+//        } else {
+//            qInfo() << file.errorString() << '\n';
+//        }
+
+//        file.close();
+//    } else {
+//        qInfo() << file.errorString() << '\n';
+
+//    }
+
+//    QJsonDocument doc(QJsonDocument::fromJson(json));
+
+//    qInfo() << doc.object().value("general")["type"].toString() << '\n';
 
 }
