@@ -1,15 +1,12 @@
-#include "core/project.h"
-#include <QTextStream>
-#include <QFile>
+#include "commands/initcommand.h"
 #include <QDebug>
-#include <QJsonObject>
 #include <iostream>
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    QString command = argv[1];
-    Project project();
+    QString strCommand = argv[1];
+    AbstractCommand *command = Q_NULLPTR;
     
     if (argc > 1)
     {
@@ -17,45 +14,18 @@ int main(int argc, char *argv[])
         {
         case 2:
             {
-                command = argv[1];
+                strCommand = argv[1];
                 
-                if (command == "--init") {
-                    QJsonObject connectionSection;
-                    connectionSection["host"] = "localhost";
-                    connectionSection["port"] = "";
-                    connectionSection["user"] = "root";
-                    connectionSection["pass"] = "";
-                    
-                    QJsonObject generalSection;
-                    generalSection["name"] = "";
-                    generalSection["descrption"] = "";
-                    generalSection["author"] = "";
-                    generalSection["charset"] = "utf8";
-                    generalSection["type"] = "";
-                    
-                    
-                    QJsonObject json;
-                    json.insert("connection", connectionSection);
-                    json.insert("general", generalSection);
-                    
-                    QJsonDocument doc;
-                    doc.setObject(json);
-                    
-                    QFile file("example.json");
-                    file.open(QIODevice::WriteOnly);
-                    
-                    if (file.isOpen()) {
-                        file.write(doc.toJson());
-                    }
-                    
-                    file.close();
+                if (strCommand == "--init") {
+                    command = new InitCommand();
+                    command->execute();
                 }
                 
-                if (command == "--help") {
+                if (strCommand == "--help") {
                     
                 }
                 
-                if (command == "--version") {
+                if (strCommand == "--version") {
                     
                 }
                 
