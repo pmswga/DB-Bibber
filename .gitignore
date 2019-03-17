@@ -2,3 +2,5 @@
 #Folders
 .vscode/*
 build-*/
+docs/html/*
+
