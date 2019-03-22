@@ -17,9 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp \
     core/project.cpp \
     commands/abstractcommand.cpp \
-    commands/initcommand.cpp
+    commands/initcommand.cpp \
+    commands/helpcommand.cpp
 
 HEADERS += \
     core/project.h \
     commands/abstractcommand.h \
-    commands/initcommand.h
+    commands/initcommand.h \
+    commands/helpcommand.h

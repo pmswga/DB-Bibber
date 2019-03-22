@@ -1,4 +1,5 @@
 #include "commands/initcommand.h"
+#include "commands/helpcommand.h"
 #include <QDebug>
 #include <iostream>
 using namespace std;
@@ -22,7 +23,8 @@ int main(int argc, char *argv[])
                 }
                 
                 if (strCommand == "--help") {
-                    
+                    command = new HelpCommand();
+                    command->execute();
                 }
                 
                 if (strCommand == "--version") {
